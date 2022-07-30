@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Musician User Details</title>  
+     {% load static %}  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>  
+<div class="container">
+    <div class="jumbotron">
+      <h1>XYX MUSIC DATABASE</h1><h1> : USER DETAILS</h1>
+    </div>
+<body>  
+<table class="table ">  
+    <tr>      
+        <th scope="col">Social Security Number</th>  
+        <th scope="col">First Name</th>  
+        <th scope="col">Middle Name</th>  
+        <th scope="col">Last Name</th>  
+        <th scope="col">Other Informations</th>
+   
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for musician in musicians %}
+
+    <tr>  
+        <td>{{ musician.M_Sn }}</td>
+        <td>{{ musician.First_Name }}</td>  
+        <td>{{ musician.Mid_Name }}</td>  
+        <td>{{ musician.Last_Name }}</td> 
+        <td>{{ musician.Phone_Num }}</td> 
+
+
+
+    </tr>  
+    {% endfor %}
+
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/" class="btn btn-primary">Home Page</a></center>  
+</body>  
+</html>  

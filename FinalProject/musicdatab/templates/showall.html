@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Musician Records</title>  
+     {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Social Security Number</th>  
+        <th>First Name</th>  
+        <th>Middle Name</th>  
+        <th>Last Name</th>  
+        <th>Phone Number</th>
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for musician in musicians %}  
+
+    <tr>  
+        <td>{{ musician.M_Sn }}</td>  
+        <td>{{ musician.First_Name }}</td>  
+        <td>{{ musician.Mid_Name }}</td>  
+        <td>{{ musician.Last_Name }}</td> 
+        <Td>{{ musician.Phone_Num}} </td>
+
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/" class="btn btn-primary">Home Page</a></center>  
+</body>  
+</html>  
